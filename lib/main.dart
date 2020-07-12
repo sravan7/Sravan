@@ -34,6 +34,13 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.0),
             ),
+            SizedBox(
+              width: 150.0,
+              height: 20.0,
+              child: Divider(
+                color: Colors.black,
+              ),
+            ),
             Container(
               padding: EdgeInsets.all(10.0),
               decoration: BoxDecoration(
@@ -69,35 +76,42 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              padding: EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
-                color: Colors.black87,
-                borderRadius: BorderRadius.all(Radius.circular(8.0)),
-              ),
+            Card(
+              color: Colors.black,
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Center(
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'muppallasravankumar@gmail.com',
+                  style: TextStyle(
                       color: Colors.white,
-                    ),
-                    SizedBox(width: 5.0),
-                    Text(
-                      'muppallasravankumar@gmail.com',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Comfortaa',
-                          fontSize: 16.0),
-                    ),
-                  ],
+                      fontFamily: 'Comfortaa',
+                      fontSize: 12.0),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
     )));
   }
 }
+//Row(
+//children: <Widget>[
+//Icon(
+//Icons.email,
+//color: Colors.white,
+//),
+//SizedBox(width: 5.0),
+//Text(
+//'muppallasravankumar@gmail.com',
+//style: TextStyle(
+//color: Colors.white,
+//fontFamily: 'Comfortaa',
+//fontSize: 16.0),
+//),
+//],
+//)
